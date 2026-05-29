@@ -1,0 +1,7 @@
+# Generic
+.idea/
+*.iml
+.vscode/
+dist/
+build/
+node_modules/
