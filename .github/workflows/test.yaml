@@ -1,0 +1,38 @@
+name: "Test"
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  test:
+    name: "Test"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: "IS Feature"
+        if: ${{ github.event.issue.type.name == 'Feature' }}
+        run: echo yes
+
+      - name: "NOT Feature"
+        if: ${{ github.event.issue.type.name != 'Feature' }}
+        run: echo yes
+
+      - name: "IS Bug"
+        if: ${{ github.event.issue.type.name == 'Bug' }}
+        run: echo yes
+
+      - name: "NOT Bug"
+        if: ${{ github.event.issue.type.name != 'Bug' }}
+        run: echo yes
+
+      - name: "IS Task"
+        if: ${{ github.event.issue.type.name == 'Task' }}
+        run: echo yes
+
+      - name: "NOT Task"
+        if: ${{ github.event.issue.type.name != 'Task' }}
+        run: echo yes
