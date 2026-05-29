@@ -37,7 +37,6 @@ jobs:
             Provide initial triage and troubleshooting steps, then gather any additional information needed to proceed.
             Respond using your general knowledge of web extensions and the following knowledge files:
           file: |
-            .github/instructions/issue.md
             README.md
             AGENTS.md
           tail: |
