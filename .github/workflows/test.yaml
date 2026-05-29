@@ -3,6 +3,8 @@ name: "Test"
 on:
   issues:
     types: [opened]
+  issue_comment: # NOTE: Fires on PR Comments
+    types: [created]
 
 jobs:
   test:
